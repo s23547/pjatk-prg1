@@ -1,12 +1,13 @@
 #include <iostream>
+#include <string>
 
-auto main() -> int // argc- zlicza ilość wyrazów podanych w termianlu
+auto main(int argc, char* argv[]) -> int // argc- zlicza ilość wyrazów podanych w termianlu
 {   
-
-    for(int i = 99; i>0; --i)
+    auto ilosc_butelek = std::stoi(argv[1]);
+    for(ilosc_butelek; ilosc_butelek>0; --ilosc_butelek)
     {
-        std::cout << i << " bottles of beer on the wall,";
-        std::cout << i << " bottles of beer.\nTake one down, pass it around,"<<std::endl;
+        std::cout << ilosc_butelek << " bottles of beer on the wall,";
+        std::cout << ilosc_butelek << " bottles of beer.\nTake one down, pass it around,"<<std::endl;
 
     }
 

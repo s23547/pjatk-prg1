@@ -13,9 +13,7 @@ auto main(int argc, char* argv[]) -> int
 	{
 		std::cout << "Jeszcze raz:";
 		std::getline(std::cin, haslo);
-		if (haslo == dobrehaslo) {
-			std::cout << "ok!\n";
-		}
 		return 0;
 	}
+	std::cout << "ok!\n";
 }
