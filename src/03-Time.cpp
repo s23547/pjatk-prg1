@@ -1,4 +1,4 @@
-﻿#include <s23547/times.h>
+﻿#include "times.h" //#include <s23547/times.h> dopisać i przekopiować na koniec
 #include <sstream>
 #include <iostream>
 
@@ -12,7 +12,7 @@ s23547::Time::Time(size_t h, size_t m, size_t s)
 
 auto s23547::Time::to_string() -> void
 {
-    while(hour<60)
+    while(hour<25)
     {
         system("cls");
         next_second(); 
