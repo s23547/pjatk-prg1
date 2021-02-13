@@ -3,12 +3,13 @@
 
 typedef unsigned char byte;
 
-void* memfrob(void* s, size_t sz) {
+void* memfrob(void* s, size_t n) 
+{
     byte* p = (byte*)s;
     byte t= (byte)42;
 
-    while (sz--)
-        *p = *p ^ t;
+    while (n--)
+        *p = (*p ^ t);
          p++;
     return s;
 }
@@ -16,9 +17,9 @@ void* memfrob(void* s, size_t sz) {
 int main()
 {
     char a[] = "Hello World";
-    size_t sz = 3;
+    size_t n = 3;
     std::cout<<"Before memfrob function: "<< a <<std::endl;
-    memfrob(&a, sz);
+    memfrob(&a, n);
     std::cout <<"After memfrob function: "<< a<<std::endl;
 
     return 0;
